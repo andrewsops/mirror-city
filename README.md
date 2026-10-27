@@ -1,66 +1,61 @@
 # Mirror City
 
-Mirror City is a Unity 3D prototype for a grounded urban life sim and syndicate-driven city game.
+Mirror City is a Unity prototype for a grounded urban life sim and syndicate-driven city game.
 
-## Core concept
+## Overview
 
-A visible city and a hidden criminal underworld sit on top of each other. The player lives in the city, survives in it, and decides whether to work with the syndicates, manipulate them, or escape the system entirely.
+The project is intentionally structured around a single-district prototype. The core design focuses on the relationship between daily city life and the hidden criminal underworld beneath it.
 
-## Features in this prototype
+## Current prototype systems
 
-- 3D player controller
-- simple day/night cycle
-- district and faction data model
-- dynamic world event system
-- save system
-- HUD scaffolding
+- player movement and interaction
+- rough day/night cycle
+- district and faction manager
+- economy manager
+- relationship manager
 - mission scaffolding
-- relationship model
-- prototype bootstrap tooling
+- save system
+- prototype HUD
 
-## Project structure
+## Prototype goals
 
-- `Assets/Scripts/Core` - player and core gameplay scripts
-- `Assets/Scripts/Managers` - district, faction, economy, mission, event, save systems
-- `Assets/Scripts/ScriptableObjects` - district, faction, and mission data
-- `Assets/Scripts/UI` - HUD and UI stubs
-- `Assets/Editor` - prototype bootstrap helpers
+- validate the city-life loop
+- validate risk and faction pressure
+- support a single-district sandbox for early development
+- establish a foundation for deeper systems later
 
 ## Recommended Unity setup
 
 - Unity 2022 LTS or 2023 LTS
-- Render Pipeline: URP
-- Input System package
-- UI package (Unity UI)
+- URP
+- Input System
+- UI Toolkit or UGUI
 
-## How to start
+## Quick start
 
 1. Open the project in Unity.
-2. Create a new empty scene.
-3. In the menu bar, run: `Mirror City > Create Prototype`
-4. This creates a starter scene with:
-   - a player controller
-   - a day/night cycle
-   - a game manager
-   - a basic HUD
-   - a placeholder district and faction state
-5. From there, expand the design by editing the scriptable objects and city state logic.
+2. In the menu bar, run `Mirror City > Create Prototype`.
+3. The bootstrap script creates a scene with a player, a light source, a basic HUD, and core managers.
+4. Expand the world by editing the ScriptableObjects under `Assets/Scripts/ScriptableObjects` or adding new systems in the managers folder.
 
-## Prototype goals
+## Prototype structure
 
-- validate the city loop
-- validate district risk and faction pressure
-- create a single-district sandbox for early design
-- set up a foundation for life systems, relationships, and mission structure
+- `Assets/Scripts/Core` - core player logic and interaction
+- `Assets/Scripts/Managers` - economy, factions, districts, time, world events, missions, save system
+- `Assets/Scripts/ScriptableObjects` - data-driven design objects
+- `Assets/Scripts/UI` - HUD and interface scripts
+- `Assets/Editor` - bootstrap tooling
 
-## Roadmap
+## Planned next systems
 
-- vertical slice: one district, one syndicate, one home, one loop
-- expand with additional districts and factions
-- add side jobs and dynamic city events
-- add deeper reputation, heat, and relationship systems
-- expand into a full social survival sandbox
+- relationship dialogues
+- district-specific events
+- hidden route map
+- faction mission generation
+- dynamic market and risk simulation
+- save-game normalization
+- tension and heat system for police/faction pressure
 
 ## Notes
 
-This repository is a starter codebase; it is intentionally structured to be expanded as the game grows.
+This repository is a starter codebase for the prototype and should be extended as production continues.
